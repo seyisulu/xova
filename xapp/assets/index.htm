@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" id="ng-app" xmlns:ng="http://angularjs.org" ng-app="xapp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Stock App | Crossover
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="XCtrl">
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="">Stock Exchange App</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="#/signin" class="pure-menu-link">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <ng-view>Loading...</ng-view>
+
+    <script type="text/ng-template" id="pindex.html">
+        <div class="splash-container">
+            <div class="splash">
+                <h1 class="splash-head">Crossover</h1>
+                <p class="splash-subhead">
+                    Crossover C++ powered stock exchange web application.
+                </p>
+            </div>
+        </div>
+        <div class="content-wrapper" id="signup">
+            <div class="content">
+                <h2 class="content-head is-center">Sign up with the fastest stock exchange on the planet.</h2>
+                <div class="pure-g">
+                    <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                        <form class="pure-form pure-form-stacked" ng-submit="loginUser()">
+                            <fieldset>
+                                <label for="username">Username</label>
+                                <input id="username" type="text" placeholder="Username" ng-model="loginData.usr">
+                                <label for="password">Your Password</label>
+                                <input id="password" type="password" placeholder="Password" ng-model="loginData.pwd">
+                                <button type="submit" class="pure-button">Sign Up</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                        <h4>Contact Us</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                        <h4>More Information</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer l-box is-center">
+                &copy; 2016.
+            </div>
+        </div>
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
